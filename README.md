@@ -50,9 +50,3 @@ Bu depo, yapay zeka dersinde öğrenilen temel arama algoritmalarının kaba kod
    
    Özyinelemeli genişlik öncelikli arama, genişlik öncelikli aramayı özyinelemeli bir şekilde uygulayan bir algoritmadır.
 
-## Kullanım
-
-Her bir algoritma kendi dosyasında bağımsız olarak bulunmaktadır. İlgili algoritmayı çalıştırmak için ilgili dosyayı seçin ve çalıştırın.
-
-```bash
-python breadth_first_search.py
