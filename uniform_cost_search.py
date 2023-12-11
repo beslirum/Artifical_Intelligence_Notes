@@ -1,20 +1,25 @@
 # UNIFORM-COST-SEARCH algorithm using priority queue
 function UNIFORM-COST-SEARCH(problem) returns a solution, or failure
     # Initialize the initial node with the initial state and path cost of 0
+    #İlk düğümü, ilk durumu ve yol maliyetini SIFIR ile başlatın.
     node ← a node with STATE = problem.INITIAL-STATE, PATH-COST = 0
     
     # Initialize the frontier with the initial node as the only element
+    #Frontier'ı tek eleman olarak başlangıç düğümü ile başlatın
     frontier ← a priority queue ordered by PATH-COST, with node as the only element
     
     # Initialize the set of explored states as empty
+    #explored state'leri boş bırakalım.
     explored ← an empty set
     
     # Main search loop
     loop do
         # Check if the frontier is empty, return failure if so
+        #Frontierin boş olup olmadığını kontrol edin, boşsa failure döndürün
         if EMPTY?(frontier) then return failure
         
         # Choose the lowest-cost node from the frontier
+        #Frontierden en düşük maliyetli düğümü seçin
         node ← POP(frontier)
         
         # Check if the goal state is reached, return the solution if true
