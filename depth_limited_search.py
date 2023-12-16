@@ -1,9 +1,8 @@
-
 function depth_limited_search(node, goal, depth_limit):
     if node.state == goal:
-        return solution(node)
+        return solution(node)  # Hedef durumu bulunduğunda çözümü döndür
     elif depth_limit == 0:
-        return "cutoff"
+        return "cutoff"  # Derinlik limitine ulaşıldığında "cutoff" durumunu döndür
     else:
         cutoff_occurred = False
         for child in node.expand():
@@ -11,11 +10,11 @@ function depth_limited_search(node, goal, depth_limit):
             if result == "cutoff":
                 cutoff_occurred = True
             elif result != "failure":
-                return result
+                return result  # Başarılı bir çözüm bulunduğunda çözümü döndür
         if cutoff_occurred:
-            return "cutoff"
+            return "cutoff"  # Alt düğümlerde "cutoff" durumu yaşandı
         else:
-            return "failure"
+            return "failure"  # Bu düğümde başka bir çözüm bulunamadı
 
 function depth_limited_search_start(initial_state, goal, max_depth):
     initial_node = Node(initial_state)
